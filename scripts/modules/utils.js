@@ -1,5 +1,10 @@
 const addZero = (n) => n < 10 ? `0${n}` : n;
 
+export const degToArrow = (deg) => {
+    const windDirections = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖'];
+    return windDirections[Math.round(deg / 45) % 8];
+}
+
 export const getCurrentDateTime = () => {
     const months = [
         'янв',
